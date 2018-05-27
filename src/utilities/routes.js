@@ -1,6 +1,10 @@
 import React from 'react'
 import { Route, Switch, withRouter } from 'react-router-dom'
+import IssueCode from '../components/issue-code'
+import Leaderboard from '../components/leader-board'
 import Login from '../components/login'
+import Performance from '../components/perfomance'
+import Points from '../components/points'
 import Register from '../components/register'
 
 const AuthRouter = () => (
@@ -13,8 +17,10 @@ const AuthRouter = () => (
 const HomeRouter = () => (
   <div className="routes-container">
     <Switch>
-      <Route path='/home/' component={Register}/>
-      <Route path='/home/leaderboard' component={Register}/>
+      <Route exact path='/home/' component={Points}/>
+      <Route path='/home/leaderboard' component={Leaderboard}/>
+      <Route path='/home/performance' component={Performance}/>
+      <Route path='/home/issue-code' component={IssueCode}/>
     </Switch>
   </div>
 )

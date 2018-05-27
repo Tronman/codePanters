@@ -1,4 +1,4 @@
-const motto = 'earn unbiased commission'
+const motto = 'your commission unbiased'
 const app_name = 'Insure Rewards'
 
 const api = {
@@ -14,12 +14,20 @@ const save_user_token = (data) => {
 
 const checkLoggedIn = () => localStorage.getItem('insure_rewards_user')
 
-const active_link = (link, location) => link === location.pathname ? 'active' : ''
+const active_link = (link, location) => link === location.pathname
+  ? 'active'
+  : ''
+
+const resolve_profile_pic = (profile_pic_link) => profile_pic_link
+  ? profile_pic_link
+  : require('../images/icon-no-pic.png')
+
 export {
   motto,
   app_name,
   checkLoggedIn,
   api,
   save_user_token,
-  active_link
+  active_link,
+  resolve_profile_pic
 }

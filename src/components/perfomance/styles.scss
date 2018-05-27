@@ -1,0 +1,20 @@
+@import "~chartist/dist/chartist.css";
+
+.chart {
+/*  position: absolute;
+  top: 20%;
+  width: 100%;*/
+}
+
+.ct-label {
+  color: #ffffff !important;
+}
+
+.chart-container {
+  width: 100%;
+  height: calc(100vh - 150px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}

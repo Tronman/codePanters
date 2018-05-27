@@ -45,6 +45,8 @@ export default class Register extends Component {
   registerUser () {
     let {form} = this.state
 
+    Object.assign(form, {metadata: {issued_codes: [new Date()]}})
+
     $.post(api.register_link, {
       ...form,
     })

@@ -35,7 +35,7 @@ form{
   padding: 15px;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100vh - 150px);
   justify-content: center;
 
   a{
