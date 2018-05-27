@@ -1,3 +1,33 @@
-.input-group {
-  margin-bottom: 10px;
+@font-face {
+  font-family: Futura-Book;
+  src: url('../../fonts/futura/Futura_Extra_Black_font.ttf');
 }
+
+@font-face {
+  font-family: Futura-Light;
+  src: url('../../fonts/futura/Futura_Light_font.ttf');
+}
+
+.logo {
+  font-family: Futura-Book, Arial, sans-serif;
+  font-size: 30px;
+  color: #ffffff;
+  position: fixed;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #384a7e;
+
+  span {
+    font-family: Futura-Light, Arial, sans-serif;
+    color: #df7968;
+  }
+}
+
+.motto {
+  font-family: Futura-Light, Arial, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+

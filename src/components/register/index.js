@@ -1,6 +1,7 @@
-import Icon, {User} from 'feather-icons'
+import { User } from 'feather-icons'
 import * as $ from 'jquery'
 import React, { Component } from 'react'
+import Loader from 'react-loader'
 import { Link } from 'react-router-dom'
 import { api, save_user_token } from '../../utilities'
 import Error from '../error'
@@ -14,11 +15,15 @@ export default class Register extends Component {
       form: {},
       form_errors: {},
       error_text: false,
+      loaded: true,
     }
   }
 
   handleSubmit (e) {
     e.preventDefault()
+    this.setState({
+      loaded: false,
+    })
     this.registerUser()
   }
 
@@ -50,6 +55,7 @@ export default class Register extends Component {
       .catch(error => {
         this.setState({
           error_text: error.responseJSON.message,
+          loaded: true,
         })
       })
   }
@@ -93,8 +99,8 @@ export default class Register extends Component {
           <Error data={this.state.error_text}/>
           }
           <div className="controls">
-            <button onClick={this.handleSubmit.bind(this)}>SIGN
-              IN
+            <button onClick={this.handleSubmit.bind(this)}>
+              <Loader loaded={this.state.loaded} scale={.5}>SIGN UP</Loader>
             </button>
             <Link to='/auth'>I have an account</Link>
           </div>

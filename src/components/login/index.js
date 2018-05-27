@@ -1,5 +1,6 @@
 import * as $ from 'jquery'
 import React, { Component } from 'react'
+import Loader from 'react-loader'
 import { Link } from 'react-router-dom'
 import { api, save_user_token } from '../../utilities'
 import Error from '../error'
@@ -12,6 +13,7 @@ export default class Login extends Component {
       form: {},
       form_errors: {},
       error_text: false,
+      loaded: true,
     }
   }
 
@@ -32,13 +34,16 @@ export default class Login extends Component {
 
   handleSubmit (e) {
     e.preventDefault()
+    this.setState({
+      loaded: false,
+    })
     this.login()
   }
 
   login () {
     let {form} = this.state
 
-    $.post(api.register_link, {
+    $.post(api.login_link, {
       ...form,
     })
       .then(results => {
@@ -48,6 +53,7 @@ export default class Login extends Component {
       .catch(error => {
         this.setState({
           error_text: error.responseJSON.message,
+          loaded: true,
         })
       })
   }
@@ -57,22 +63,25 @@ export default class Login extends Component {
       <div className="login">
         <form onSubmit={this.handleSubmit.bind(this)}>
           <div className="input-group">
-            <input type="email" name='email'
+            <input type="email" name='user'
                    onChange={this.handleChange.bind(this)} placeholder='Email'/>
           </div>
           <div className="input-group">
             <input type="company" name='company'
-                   onChange={this.handleChange.bind(this)} placeholder='Company'/>
+                   onChange={this.handleChange.bind(this)}
+                   placeholder='Company'/>
           </div>
           <div className="input-group">
             <input type="password" name='password'
-                   onChange={this.handleChange.bind(this)} placeholder='Password'/>
+                   onChange={this.handleChange.bind(this)}
+                   placeholder='Password'/>
           </div>
           {this.state.error_text &&
           <Error data={this.state.error_text}/>
           }
           <div className="controls">
-            <button onClick={this.handleSubmit.bind(this)}>SIGN IN</button>
+            <button onClick={this.handleSubmit.bind(this)}><Loader
+              loaded={this.state.loaded} scale={.5}>SIGN IN</Loader></button>
             <Link to='/auth/register'>Don't have an account</Link>
           </div>
         </form>

@@ -14,10 +14,12 @@ const save_user_token = (data) => {
 
 const checkLoggedIn = () => localStorage.getItem('insure_rewards_user')
 
+const active_link = (link, location) => link === location.pathname ? 'active' : ''
 export {
   motto,
   app_name,
   checkLoggedIn,
   api,
   save_user_token,
+  active_link
 }
