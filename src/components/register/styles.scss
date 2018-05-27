@@ -1,0 +1,50 @@
+input {
+  border: none;
+  border-bottom: 1px solid #000000;
+  outline: none;
+  height: 40px;
+  width: 100%;
+  font-size: 14px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+button {
+  height: 40px;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 250px;
+  display: block;
+  font-size: 12px;
+  cursor: pointer;
+  background: #1f2549;
+  border: none;
+  color: #fff;
+  margin: 20px auto;
+
+  &[disabled] {
+    background: #eee;
+  }
+}
+
+form{
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+
+  a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+  }
+}
+
+.input-group {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter:400,400i,700');
+@import "~normalize.css";
+
+body {
+  background: #384a7e;
+}
+
+.App {
+  text-align: center;
+  box-sizing: border-box;
+  font-family: 'Bitter', Arial, sans-serif;
+  font-size: 16px;
+
+  * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+button {
+  outline: none;
+  transition: all .3s;
+  border: none;
+
+  &:hover {
+    opacity: .6;
+  }
+}
