@@ -3,11 +3,11 @@
   bottom: 0;
   width: 100%;
   display: flex;
-  background: #6a7bab;
+  background: #323c4c;
 
   a {
     flex-grow: 1;
-    color: #ffffff;
+    color: #F3B54A;
     text-decoration: none;
     font-family: Futura-Light, Arial, sans-serif;
     text-transform: uppercase;
@@ -23,7 +23,7 @@
     }
 
     &.active {
-      background: #1f2549;
+      background: rgb(87, 96, 112);
     }
 
     &:hover {
