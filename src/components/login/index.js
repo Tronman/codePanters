@@ -2,7 +2,7 @@ import * as $ from 'jquery'
 import React, { Component } from 'react'
 import Loader from 'react-loader'
 import { Link } from 'react-router-dom'
-import { api, save_user_token } from '../../utilities'
+  import { api, save_user_token } from '../../utilities'
 import Error from '../error'
 
 export default class Login extends Component {

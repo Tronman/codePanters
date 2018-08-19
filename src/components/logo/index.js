@@ -5,7 +5,7 @@ import './styles.css'
 const Logo = () => (
   <div className="logo">
     <div>
-      INSURE<span>REWARDS</span>
+      Assert<span>WISE</span>
     </div>
     <div className="motto">{motto}</div>
   </div>

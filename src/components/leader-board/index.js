@@ -10,6 +10,7 @@ const LeaderBoardItem = ({data}) => (
     }}/>
     <div className='name'>{data.name}</div>
     <div className='balance'>{data.balance}</div>
+    <button id="get"> Get </button>
   </div>
 )
 
@@ -19,17 +20,12 @@ export default class Leaderboard extends Component {
 
     this.state = {
       leaderboard: [
-        {name: 'Thulani Zondo', balance: 10, profilePic: ''},
-        {name: 'Pride Musvaire', balance: 4, profilePic: ''},
-        {name: 'John John', balance: 6, profilePic: ''},
-        {name: 'James Mwali', balance: 33, profilePic: ''},
-        {name: 'Simon W', balance: 2, profilePic: ''},
-        {name: 'Dewet W', balance: 0, profilePic: ''},
-        {name: 'Jonathan Moses', balance: 6, profilePic: ''},
-        {name: 'Nathan Moses', balance: 17, profilePic: ''},
-        {name: 'Neo Moses', balance: 20, profilePic: ''},
-        {name: 'Neo Moses', balance: 20, profilePic: ''},
-        {name: 'Neo Moses', balance: 20, profilePic: ''},
+        {name: 'Mac Book Pro', balance: 10, profilePic: ''},
+        {name: 'Dell inspiron', balance: 4, profilePic: ''},
+        {name: 'Lenovo', balance: 6, profilePic: ''},
+        {name: 'Ipad', balance: 33, profilePic: ''},
+        {name: 'Canon camera d3', balance: 2, profilePic: ''},
+     
       ],
     }
   }

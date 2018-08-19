@@ -19,6 +19,7 @@
     "react-loader": "^2.4.5",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
+    "rehive": "^1.20.13",
     "shortid": "^2.2.8"
   },
   "scripts": {

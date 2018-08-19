@@ -1,4 +1,4 @@
-const motto = 'your commission unbiased'
+const motto = 'Assert Care Incentivized'
 const app_name = 'Insure Rewards'
 
 const api = {
@@ -8,8 +8,10 @@ const api = {
 }
 
 const save_user_token = (data) => {
+  
   console.log(data)
   localStorage.setItem('insure_rewards_user', JSON.stringify(data))
+
 }
 
 const checkLoggedIn = () => localStorage.getItem('insure_rewards_user')

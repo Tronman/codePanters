@@ -21,11 +21,11 @@ class Home extends Component {
         {/*<HomeRouter/>*/}
         <div className="home-tabs">
           <Link to='/home' className={active_link('/home',
-            this.props.location)}><FontAwesomeIcon icon={faPercentage}/> Points</Link>
+            this.props.location)}><FontAwesomeIcon icon={faPercentage}/> Dashboard</Link>
           <Link to='/home/leaderboard'
                 className={active_link('/home/leaderboard',
                   this.props.location)}><FontAwesomeIcon
-            icon={faBalanceScale}/> Leaderboard</Link>
+            icon={faBalanceScale}/> Availables</Link>
           <Link to='/home/performance'
                 className={active_link('/home/performance',
                   this.props.location)}><FontAwesomeIcon

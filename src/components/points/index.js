@@ -2,6 +2,10 @@ import * as _ from 'lodash'
 import React, { Component } from 'react'
 import { resolve_profile_pic } from '../../utilities'
 import './styles.css'
+import rehive from 'rehive'
+import { api, save_user_token } from '../../utilities'
+import * as $ from 'jquery'
+
 
 const UserProfile = (props) =>{
   return (
@@ -21,6 +25,11 @@ const UserProfile = (props) =>{
   )
 }
 
+
+
+
+
+
 const Points = ({data}) => (
   <div className="leader-board-item">
     <div className='profile-pic' style={{
@@ -31,31 +40,33 @@ const Points = ({data}) => (
   </div>
 )
 
+
+const token = localStorage.getItem('insure_rewards_user');
+var json = JSON.parse(token);
+// ["data"].token
+console.log("your token is",json);
 export default class Leaderboard extends Component {
+  
   constructor (props) {
     super(props)
+    
 
     this.state = {
-      user_details:{username:'User',
-                    emp_number:'123445',
-                    credit:'68'
-    },
-      leaderboard: [
-        {name: 'Thulani Zondo', balance: 10, profilePic: ''},
-        {name: 'Pride Musvaire', balance: 4, profilePic: ''},
-        {name: 'John John', balance: 6, profilePic: ''},
-        {name: 'James Mwali', balance: 33, profilePic: ''},
-        {name: 'Simon W', balance: 2, profilePic: ''},
-        {name: 'Dewet W', balance: 0, profilePic: ''},
-        {name: 'Jonathan Moses', balance: 6, profilePic: ''},
-        {name: 'Nathan Moses', balance: 17, profilePic: ''},
-        {name: 'Neo Moses', balance: 20, profilePic: ''},
-        {name: 'Neo Moses', balance: 20, profilePic: ''},
-        {name: 'Neo Moses', balance: 20, profilePic: ''},
-      ],
+      username:json.data.toString(),
+      emp_number:'123445',
+      credit:'68'
     }
+
   }
 
+
+
+  componentDidMount(){
+    $.get(`https://api.rehive.com/3/user/${api.save_user_token}`, (data)=>{
+      console.log(data);
+    })
+
+  }
   render () {
     return (
       <div>
