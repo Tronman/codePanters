@@ -1,0 +1,19 @@
+{
+  "name": "money-bugs-main-admin",
+  "version": "1.0.0",
+  "description": "money bugs asset tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pridemusvaire",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.17.1",
+    "figlet": "^1.2.0",
+    "inquirer": "^6.1.0",
+    "jquery": "^3.3.1",
+    "moment": "^2.22.2",
+    "request": "^2.88.0"
+  }
+}
