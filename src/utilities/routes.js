@@ -3,7 +3,7 @@ import { Route, Switch, withRouter } from 'react-router-dom'
 import IssueCode from '../components/issue-code'
 import Leaderboard from '../components/leader-board'
 import Login from '../components/login'
-import Performance from '../components/perfomance'
+import InventoryBoard from '../components/product-item'
 import Points from '../components/points'
 import Register from '../components/register'
 
@@ -19,8 +19,9 @@ const HomeRouter = () => (
     <Switch>
       <Route exact path='/home/' component={Points}/>
       <Route path='/home/leaderboard' component={Leaderboard}/>
-      <Route path='/home/performance' component={Performance}/>
+      <Route path='/home/products' component={InventoryBoard}/>
       <Route path='/home/issue-code' component={IssueCode}/>
+      <Route path='/home/products-details' component={ProductDetails}/>
     </Switch>
   </div>
 )

@@ -26,10 +26,10 @@ class Home extends Component {
                 className={active_link('/home/leaderboard',
                   this.props.location)}><FontAwesomeIcon
             icon={faBalanceScale}/> Leaderboard</Link>
-          <Link to='/home/performance'
-                className={active_link('/home/performance',
+          <Link to='/home/products'
+                className={active_link('/home/products',
                   this.props.location)}><FontAwesomeIcon
-            icon={faChartLine}/> Performance</Link>
+            icon={faChartLine}/> Inventory</Link>
           <Link to='/home/issue-code'
                 className={active_link('/home/issue-code',
                   this.props.location)}><FontAwesomeIcon
